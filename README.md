@@ -9,9 +9,9 @@ ProfessorSearch 教授搜索 : 教授信息查询
 
 -用所属组织缩小同名教授的范围
 
-- 在选择列表中显示论文数量、总引用次数和所属组织
+-在选择列表中显示论文数量、总引用次数和所属组织
 
-- 显示选中教授的基本资料：OpenAlex 编号、ORCID、论文总数、引用次数、H 指数和 i10 指数，显示研究方向（Topics）和研究概念（Concepts）。
+-显示选中教授的基本资料：OpenAlex 编号、ORCID、论文总数、引用次数、H 指数和 i10 指数，显示研究方向（Topics）和研究概念（Concepts）。
 
 -询问“这是不是你要找的教授”；输入 `y` 结束，输入 `n` 返回重新选择
 
@@ -45,7 +45,9 @@ python -m pip install pyalex
 
 于powershell中输入
 
+```powershell
 python -c "from pyalex import Authors; print('PyAlex 安装成功')"
+```
 
 3.3配置 OpenAlex API key
 
