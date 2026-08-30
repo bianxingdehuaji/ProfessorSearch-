@@ -117,7 +117,7 @@ pause
 
 Q:什么是OpenAlex？
 
-A：OpenAlex（https://openalex.org/）是一个以亚历山大图书馆命名的开放获取科学论文、作者和机构书目目录。它由OurResearch于2022年1月开始运营，目前已收录超过2.5亿篇学术著作。
+A：OpenAlex ( https://openalex.org/ )是一个以亚历山大图书馆命名的开放获取科学论文、作者和机构书目目录。它由OurResearch于2022年1月开始运营，目前已收录超过2.5亿篇学术著作。
 
 Q: 显示“未提供关键词”或“未提供 Concept 数据”是报错吗？
 
