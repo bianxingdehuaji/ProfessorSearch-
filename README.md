@@ -21,8 +21,11 @@ ProfessorSearch 教授信息查询
 **2运行环境**
 
 Windows
+
 Python 3.8 或更高版本
+
 PyAlex
+
 OpenAlex API key\*（需要手动配置）\*
 
 本项目已在 Python 3.13 环境中学习和使用。
