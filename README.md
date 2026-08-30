@@ -34,7 +34,9 @@ OpenAlex API key\*（需要手动配置）\*
 
 于powershell中输入：
 
+```powershell
 python -m pip install pyalex
+```
 
 3.2验证安装：
 
@@ -51,15 +53,15 @@ python -c "from pyalex import Authors; print('PyAlex 安装成功')"
 
 3.3.3. 在 `ProfessorSearch.py` 顶部配置：
 
+```
 import pyalex
 pyalex.config.api\_key = "*在这里填入你的 API 密钥*"
 
 *只用在填入正确 API key 时，工具才能正常工作。*
 
-
+```
 
 *\*请勿将 API key 上传到 GitHub，也不要发送给他人。*
-
 
 
 **4运行程序**
@@ -85,12 +87,12 @@ pyalex.config.api\_key = "*在这里填入你的 API 密钥*"
 
 建议使用英文姓名，例如：
 
-\*``
+```
 
 教授姓名：Albert Einstein
 
 
-```\*
+```
 
 
 **5一键启动***（此功能不是必须功能）*
