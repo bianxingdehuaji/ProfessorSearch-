@@ -15,9 +15,11 @@ Github项目地址：https://github.com/bianxingdehuaji/ProfessorSearch-
 	我在 Codex 的帮助下，完成了第一版程序：
 
 '''
+
 cd C:\Users\Yang\Documents\Codex\2026-08-28\wo
 $env:PYTHONPATH = "src"
 C:\Users\Yang\AppData\Local\Programs\Python\Python313\python.exe -m prof_researcher.cli "教授姓名" --profile-url "教授官网个人主页网址" --output-dir outputs
+
 '''
 
 这一版本的程序很粗糙，需要用户自己找到教授的主页，输入程序后，以文本提取的方式生成教授的简介 Markdown 文件。除非在客户端接入 AI 工具，否则我希望的研究方向，简介简化全都没有办法实现。此外，无法直接获取教授的个人简介的 URL 也是这一方案的缺点。
@@ -29,7 +31,9 @@ C:\Users\Yang\AppData\Local\Programs\Python\Python313\python.exe -m prof_researc
 以下是第二版本的程序：
 
 '''
+
 from pyalex import Authors
+
 name = input("请输入作者姓名（建议使用英文）：").strip()
 authors = Authors().search(name).get(per_page=5)
 if not authors:
@@ -42,6 +46,7 @@ else:
         print("OpenAlex 编号：", author.get("id", "未知"))
         print("论文数量：", author.get("works_count", "未知"))
         print("被引用次数：", author.get("cited_by_count", "未知"))
+		
 '''
 
 这一版本的程序确定了 ‘输入姓名--检索筛选--返回结果’ 的基本流程。已经具备找到教授论文数量、被引量的功能，但还需要进一步完善。
@@ -54,6 +59,7 @@ else:
 我在第三版的程序中加入了一个循环指令，形成第四版。
 
 '''
+
  while True:
 
 （此处是原有的第三版程序）
@@ -65,6 +71,7 @@ else:
                 print("好的，请重新选择。")
             else:
                 print("请输入 y 或 n；将返回作者列表供你重新选择。")
+
 '''
 
 此时的程序已经接近最后的版本了。
