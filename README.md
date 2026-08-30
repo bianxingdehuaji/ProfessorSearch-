@@ -125,7 +125,7 @@ A:不是。OpenAlex 不保证每位教授都具有这些字段；研究方向（
 
 Q:为什么需要 API key？
 
-A:API key 用于识别你的 OpenAlex 账户，并提供更适合日常查询的访问额度。详见 \[PyAlex 官方文档](https://pypi.org/project/pyalex/)。
+A:API key 用于识别你的 OpenAlex 账户，并提供更适合日常查询的访问额度。详见 \[PyAlex 官方文档] ( https://pypi.org/project/pyalex/ )。
 
 **7后续可以扩展的功能**
 
