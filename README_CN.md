@@ -76,8 +76,6 @@ pyalex.config.api\_key = "*在这里填入你的 API 密钥*"
 
 请输入教授姓名（建议使用英文）：
 
-请输入教授所属组织（建议使用英文）：
-
 请输入想查看的教授编号：
 
 这是不是你要找的教授？(y/n)：
@@ -90,8 +88,6 @@ pyalex.config.api\_key = "*在这里填入你的 API 密钥*"
 \*``
 
 教授姓名：Albert Einstein
-
-所属组织：Princeton University
 
 ```\*
 
