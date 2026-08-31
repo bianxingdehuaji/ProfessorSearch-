@@ -156,6 +156,21 @@ A:研究方向 ( Topics ) : OpenAlex 先依据论文之间的引用关系构建�
 
 \-对于在国内发表的中文期刊支持有限。
 
+**9开源项目引用和 AI 辅助声明**
+
+9.1本项目使用了 OpenAI Codex 辅助开发。
+
+9.2本项目使用以下公开数据和开源项目：
+
+- OpenAlex：提供学术作者、论文及研究主题数据
+  https://openalex.org/
+  
+- PyAlex：OpenAlex API 的 Python 客户端
+ https://github.com/J535D165/pyalex
+  
+
+感谢相关开源社区提供的数据与工具支持。
+
 
 
 
