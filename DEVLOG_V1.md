@@ -1,4 +1,5 @@
-ProfessorSearch 教授搜索
+# ProfessorSearchV1 教授搜索V1 DevLOG
+
 Github项目地址：https://github.com/bianxingdehuaji/ProfessorSearch-
 
 这是我的第一个项目，可以用于搜索教授的影响力、近期研究方向等学术信息。这一项目利用了开源项目PyAlex (https://github.com/J535D165/pyalex) 实现功能。程序由 Codex 辅助设计。
