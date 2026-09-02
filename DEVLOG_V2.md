@@ -1,4 +1,4 @@
-# ProfessorSearchV2 教授搜索V2
+# ProfessorSearchV2 教授搜索V2 DevLOG
 
 Github项目地址：https://github.com/bianxingdehuaji/ProfessorSearch-
 
@@ -8,7 +8,7 @@ ProfessorSearchV2 是ProfessorSearchV1 的迭代版本。V2 在 V1 的基础功�
 
 以下是 ProfessorSearchV2 的开发历程：
 
-1 ProfessorSearchV1功能基本实现
+**1 ProfessorSearchV1功能基本实现**
 
 经过测试，ProfessorSearchV1 的功能达成预期，但是易用性方面存在以下问题：
 
@@ -20,7 +20,7 @@ ProfessorSearchV2 是ProfessorSearchV1 的迭代版本。V2 在 V1 的基础功�
 
 因此，我进一步开发了 ProfessorSearchV2 ，完善 V1 存在的问题。
 
-2 ProfessorSearch 底层重构
+**2 ProfessorSearch 底层重构**
 
 因为我个人对于 GUI 的编写没有经验，ProfessorSearch 的 GUI 编写全部由 AI 完成。
 
@@ -33,7 +33,7 @@ ProfessorSearchV2 是ProfessorSearchV1 的迭代版本。V2 在 V1 的基础功�
 在第一版的基础上，程序加入了一个 API 密钥本地化保存的机制。第三版的新增变化如下：
 
 
-'''
+```
 
 以上是第一版程序
 
@@ -63,11 +63,11 @@ self.key_status_label = ttk.Label(key_frame, text="", foreground="green") self.k
 
 以下是第一版程序
 
-'''
+```
 
 经过测试，第三版程序有一个硬伤：密钥一经保存就不能更改。为了修复问题，第四版更改了第三版的新增部分，如下：
 
-'''
+```
 key_frame = ttk.LabelFrame(self.root, text=" API 设置 ", padding=10)
 key_frame.pack(fill=tk.X, padx=10, pady=5)
 
@@ -91,21 +91,38 @@ self.edit_key_btn.pack(side=tk.LEFT, padx=5)
 self.key_status_label = ttk.Label(key_frame, text="", foreground="green")
 self.key_status_label.pack(side=tk.LEFT, padx=5)
 
-'''
+```
 
 经过测试， API 密钥可以在第四版中正确保存并修改。至此，程序完成了封装之前的准备。
 
-3封装
+**3封装**
 
 通过打包工具 pyinstaller ，程序被打包为 ProfessorSearch_GUI.exe。通过测试，所用功能运行稳定。封装完成
 
 撰写 README 后，ProfessorSearchV2 被命名为 ProfessorSearch_GUI 上传到 GitHub。
 
-4展望
+**4展望**
 
 顺利的图形化和封装极大的降低了使用门槛，但是，和 V1 一样，很多功能还没有被完善：
 	- OpenAlex 数据库对国内学者的支持有限，一些数据更新延迟。
 	-未来可以拓展：用户搜索记录，结果输出为CSV 和 Excel 表格，展示教授的代表文章等功能。
 
+**5技术使用声明**
+
+5.1本项目使用了如下开源项目：
+
+-pyalex
+
+( https://github.com/ourresearch/pyalex )
+
+-OpenAlex API
+
+( https://openalex.org/ )
+
+-Python & Tkinter Framework
+
+来自 Python Standard Library 
+
+5.2本项目使用 AI 技术辅助完成
  
 
