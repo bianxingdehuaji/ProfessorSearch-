@@ -1,4 +1,5 @@
-ProfessorSearchV2 教授搜索V2
+# ProfessorSearchV2 教授搜索V2
+
 Github项目地址：https://github.com/bianxingdehuaji/ProfessorSearch-
 
 ProfessorSearch是我的第一个项目，可以用于搜索教授的影响力、近期研究方向等学术信息。这一项目利用了开源项目PyAlex (https://github.com/J535D165/pyalex) 实现功能。项目使用了 ChatGPT、Codex 等 AI 工具进行资料检索与辅助开发。项目的需求定义、方案选择、测试与迭代由我持续参与完成。
@@ -11,11 +12,11 @@ ProfessorSearchV2 是ProfessorSearchV1 的迭代版本。V2 在 V1 的基础功�
 
 经过测试，ProfessorSearchV1 的功能达成预期，但是易用性方面存在以下问题：
 
-	-需要额外配置 python 环境，安装Pyalex 的数据库。
-	-需要用户自行编辑 API 密钥。
-	-没有图形化的 UI 。
-	-程序稳定性不足，不能保护程序不被更改。
-	-没有设计多次搜索的机制：启动一次程序，只能搜集一个教授的信息。
+-需要额外配置 python 环境，安装Pyalex 的数据库。
+-需要用户自行编辑 API 密钥。
+-没有图形化的 UI 。
+-程序稳定性不足，不能保护程序不被更改。
+-没有设计多次搜索的机制：启动一次程序，只能搜集一个教授的信息。
 
 因此，我进一步开发了 ProfessorSearchV2 ，完善 V1 存在的问题。
 
@@ -33,21 +34,22 @@ ProfessorSearchV2 是ProfessorSearchV1 的迭代版本。V2 在 V1 的基础功�
 
 
 '''
+
 以上是第一版程序
 
 CONFIG_FILE = "config.json"
 
-# 配置文件保存路径（会在程序同级目录下自动生成 config.json）
+#配置文件保存路径（会在程序同级目录下自动生成 config.json）
 
 self.load_api_key()
 
-# 程序启动时尝试从本地加载保存的 API Key
+#程序启动时尝试从本地加载保存的 API Key
 
 key_frame = ttk.LabelFrame(self.root, text=" API 设置 ", padding=10) key_frame.pack(fill=tk.X, padx=10, pady=5)
 
 ttk.Label(key_frame, text="OpenAlex API Key:").pack(side=tk.LEFT, padx=(0, 5))
 
- # 显示API Key 输入框 
+#显示API Key 输入框 
 
 self.api_key_entry = ttk.Entry(key_frame, width=45) self.api_key_entry.pack(side=tk.LEFT, padx=5)
 
@@ -71,17 +73,17 @@ key_frame.pack(fill=tk.X, padx=10, pady=5)
 
 ttk.Label(key_frame, text="OpenAlex API Key:").pack(side=tk.LEFT, padx=(0, 5))
 
-# API Key 输入框
+#API Key 输入框
 
 self.api_key_entry = ttk.Entry(key_frame, width=40)
 self.api_key_entry.pack(side=tk.LEFT, padx=5)
 
-# 保存/更新按钮
+#保存/更新按钮
 
 self.save_key_btn = ttk.Button(key_frame, text="保存/更新 Key", command=self.save_api_key_event)
 self.save_key_btn.pack(side=tk.LEFT, padx=5)
 
-# 修改按钮（用于一键解锁输入框，方便重新修改）
+#修改按钮（用于一键解锁输入框，方便重新修改）
 
 self.edit_key_btn = ttk.Button(key_frame, text="修改", command=self.enable_key_editing)
 self.edit_key_btn.pack(side=tk.LEFT, padx=5)
